@@ -3,13 +3,8 @@ body {
  
 }
 
-
 main {
   padding: 2rem;
-  display: flex;
-  justify-content: space-evenly ;
-  align-items: ;
-  flex-direction: column;
   background-color: white;
   color: black;    
   margin: 0 auto;
@@ -21,7 +16,20 @@ main {
 #sort-code, #sort-progression, #sort-name {
   cursor: pointer;
   text-decoration: underline;
+  background-color: lightgray;
 }
 
+table {
+  width: 100%;
+  margin: 20px 0;
+  font-family: sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Lite skugga */
+}
+
+th, td {
+  padding: 12px 15px; /* Ger luft inuti cellerna */
+  text-align: left;
+  border-bottom: 1px solid lightgrey; /* Tunna linjer mellan raderna */
+}
 
 

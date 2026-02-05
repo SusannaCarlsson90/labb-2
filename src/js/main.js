@@ -2,8 +2,6 @@
 
 let allCourses = [];
 
-
-
 document.addEventListener("DOMContentLoaded", async () => {
   loadData();
   //Händelselyssnare för sortering
@@ -14,17 +12,16 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   document.getElementById("sort-name").addEventListener("click", () => {
-    const sortedByCode = [...allCourses].sort((a,b) => a.coursename.localeCompare(b.coursename));
-    displayCourses(sortedByCode);
+    const sortedByName = [...allCourses].sort((a,b) => a.coursename.localeCompare(b.coursename));
+    displayCourses(sortedByName);
   });
 
   document.getElementById("sort-progression").addEventListener("click", () => {
-    const sortedByCode = [...allCourses].sort((a,b) => a.progression.localeCompare(b.progression));
-    displayCourses(sortedByCode);
+    const sortedByProgression = [...allCourses].sort((a,b) => a.progression.localeCompare(b.progression));
+    displayCourses(sortedByProgression);
 
   });
 });
-
 
 
 async function loadData() {
@@ -37,7 +34,7 @@ allCourses = await response.json();
 //Lagra globalt 
 console.table(allCourses);
 
-displayCourses(allCourses); //Anropar funktion för att skriva ut tabell 
+displayCourses(allCourses); 
   } catch(error) {
     console.error("Fel: " + error);
 
@@ -47,12 +44,12 @@ displayCourses(allCourses); //Anropar funktion för att skriva ut tabell
 function displayCourses(courses) {
  
   const courseListEl = document.getElementById("course-list");
-  //loopa ut
+  
 
   courseListEl.innerHTML = ""; //Nollställer varje gång 
   
   courses.forEach(course => {
-    // För varje kurs lägger vi till en ny rad i tabellen
+    // Loopa, för varje kurs läggs en ny rad till i tabellen 
     courseListEl.innerHTML += `
       <tr>
         <td>${course.code}</td>
@@ -64,7 +61,7 @@ function displayCourses(courses) {
 }
 
 window.onload = () => {
-  //Händelselyssanre
+  //Händelselyssnare
   document.getElementById("search").addEventListener("input", filterData);
 
 }
