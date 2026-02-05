@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>labb-2</title>
+    <link rel="stylesheet" href="/src/css/styles.css">
+  </head>
+  <body>
+ 
+  <main>
+    <h2>Kurser i Webbutvecklingsprogrammet</h2>
+    
+    <div class="search-container">
+        <label for="search">Sök kurskod eller namn:</label>
+        <input type="text" id="search" placeholder="Ex: DT057G...">
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th id="sort-code">Kurskod</th>
+                <th id="sort-name">Kursnamn</th>
+                <th id="sort-progression">Progression</th>
+            </tr>
+        </thead>
+        <tbody id="course-list">
+            </tbody>
+    </table>
+  </main>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
