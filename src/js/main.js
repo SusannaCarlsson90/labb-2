@@ -14,13 +14,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   document.getElementById("sort-name").addEventListener("click", () => {
-    const sortedByCode = [...allCourses].sort((a,b) => a.coursename.localeCompare(b.coursename));
-    displayCourses(sortedByCode);
+    const sortedByName = [...allCourses].sort((a,b) => a.coursename.localeCompare(b.coursename));
+    displayCourses(sortedByName);
   });
 
   document.getElementById("sort-progression").addEventListener("click", () => {
-    const sortedByCode = [...allCourses].sort((a,b) => a.progression.localeCompare(b.progression));
-    displayCourses(sortedByCode);
+    const sortedByProgression = [...allCourses].sort((a,b) => a.progression.localeCompare(b.progression));
+    displayCourses(sortedByProgression);
 
   });
 });
